@@ -32,4 +32,7 @@ for (int i = 0; i < matrix.Length; i++)
 {
     Console.Write($"{matrix[i]} ");
 }
+Console.WriteLine();
+
+
 Console.WriteLine(Max(matrix)-Min(matrix));

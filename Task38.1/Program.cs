@@ -1,7 +1,6 @@
-﻿
-double Max(double[]matr)
+﻿int Max(int[]matr)
 {
-    double max = matr[0];
+    int max = matr[0];
     for (int i = 0; i < matr.Length; i++)
     {
         if (matr[i] > max) max = matr[i];
@@ -9,9 +8,9 @@ double Max(double[]matr)
     }
 return(max);
 }
-double Min(double[]col)
+int Min(int[]col)
 {
-    double min = col[0];
+    int min = col[0];
     for (int j = 0; j < col.Length; j++)
     {
         if (col[j]< min) min = col[j];
@@ -19,14 +18,18 @@ double Min(double[]col)
 return(min);
 }
 
-void FillArray(double[]collection)
+void FillArray(int[]collection)
 {
     for (int i = 0; i < collection.Length; i++)
     {
         Random rand = new Random();
-        collection[i] = rand.Next(-100, 100) + rand.NextDouble();
+        collection[i] = rand.Next(-100, 100);
     }
 }
-double[] matrix = new double[10];
+int[] matrix = new int[10];
 FillArray(matrix);
+for (int i = 0; i < matrix.Length; i++)
+{
+    Console.Write($"{matrix[i]} ");
+}
 Console.WriteLine(Max(matrix)-Min(matrix));

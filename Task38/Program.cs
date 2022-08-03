@@ -1,14 +1,23 @@
 ﻿
-int Max(int[]matr)
+double Max(double[]matr)
 {
-    int m = 0;
+    double max = matr[0];
     for (int i = 0; i < matr.Length; i++)
     {
-        if (matr[i] > m) m = matr[i];
+        if (matr[i] > max) max = matr[i];
          
     }
-return(m);
+return(max);
 }
+double Min(double[]col)
+{
+    double min = col[0];
+    for (int j = 0; j < col.Length; j++)
+    {
+        if (col[j]< min) min = col[j];
+    }
+return(min);
+}
+double[] matrix = {5.6, 10.2, 356.9, 57.1, 1.3, 456.7};
 
-int[] matrix = {5,10,356,57,9,1};
-Console.WriteLine(Max(matrix));
+Console.WriteLine(Max(matrix)-Min(matrix));
